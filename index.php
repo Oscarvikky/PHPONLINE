@@ -28,6 +28,26 @@
    print_r($student);
    echo("<br/>");
    print_r($student[2]);
+    echo("<br/>");
+    for ($i=0; $i < count($student) ; $i++) { 
+        echo("<br/>");
+        echo " my number is " . $i . " and my name is " . $student[$i] ;
+    }
+
+    echo("<br/>");
+
+  
+
+    // associative arry
+    $studentlist = array("name" => "Oscar", "department" => "software", "school" => "Sqi");
+    print_r($studentlist);
+    echo("<br/>");
+
+    foreach ($studentlist as $key => $value) {
+        echo("<br/>");
+      echo " The " . $key . " is " . $value;
+    };
+
 
    
 
