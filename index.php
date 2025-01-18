@@ -47,9 +47,35 @@
         echo("<br/>");
       echo " The " . $key . " is " . $value;
     };
+    
+    echo("<br/>");
+
+    $obj = new stdclass;
+    $obj->name = "Oscar";
+    $obj-> depertment = "software";
+    $obj->school ="SQI";
+
+    $studentarry = [];
+    array_push($studentarry, $obj);
+    print_r($studentarry);
 
 
-   
+    $mainarray = [];
+    $firstArray = array("name" => "Oscar", "department" => "software", "school" => "SQI");
+
+    $secondArray = array("name" => "Onola", "department" => "Data", "school" => "SQI");
+
+    $thirdArray = array("name" => "Oscar", "department" => "UI/UX", "school" => "SQI");
+
+     array_push($mainarray, $firstArray, $secondArray, $thirdArray);
+
+     echo("<br/>");
+   foreach ($mainarray as $student) {
+    foreach ($student as $key => $value) {
+      echo("<br/>");
+      echo " the ". $key . " is " . $value;
+    }
+   }
 
 
 
