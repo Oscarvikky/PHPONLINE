@@ -76,7 +76,19 @@
       echo " the ". $key . " is " . $value;
     }
    }
+     session_start();
+     
 
+     if (isset($_POST["submit"])) {
+      $firstname =$_POST["firstname"];
+      $lastname =$_POST["lastname"];
+      $email =$_POST["email"];
+      $password =$_POST["password"];
 
+      if (empty($firstname) || empty($lastname) || empty($email) || empty($password)) {
+        $_SESSION['message'] = "all fields must be filed";
+        header('location: form.php');
+      }
 
+     }
 ?>
